@@ -1,6 +1,6 @@
 mongoose = require('mongoose'),
 
-mongoose.connect('mongodb://localhost/annotationdb', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/annotationdb', {
     useUnifiedTopology: true,
     useNewUrlParser: true
 })
