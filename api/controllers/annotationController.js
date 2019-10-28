@@ -2,6 +2,7 @@
 
 var mongoose = require('mongoose'),
 Annotation = mongoose.model('Annotations')
+mongoose.set('useFindAndModify', false);
 
 exports.list_all_annotations = function(req, res) {
    Annotation.find({}, function(err, msg) {

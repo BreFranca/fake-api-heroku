@@ -2,12 +2,12 @@ var express = require('express'),
 app = express(),
 port = process.env.PORT || 4000,
 mongoose = require('mongoose'),
-Message = require('./api/models/annotationModel'),
+Annotation = require('./api/models/annotationModel'),
 bodyParser = require('body-parser')
 
 mongoose.Promise = global.Promise
 
-mongoose.connect('mongodb://localhost/annotationdb')
+mongoose.connect('mongodb://localhost:27017/annotationdb')
 
 app.use(bodyParser.urlencoded({ extended: true }))
 
